@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter, Download, Mail } from "lucide-react";
+import profileImage from "@assets/WhatsApp Image 2025-08-17 at 21.26.36_698cc3d0_1755446277688.jpg";
 
 export default function Hero() {
   const handleContactClick = () => {
@@ -126,8 +127,8 @@ export default function Hero() {
                 transition={{ duration: 0.3 }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800"
-                  alt="Professional headshot"
+                  src={profileImage}
+                  alt="Ashnoor Singh - Professional headshot"
                   className="w-full h-full object-cover"
                 />
               </motion.div>
