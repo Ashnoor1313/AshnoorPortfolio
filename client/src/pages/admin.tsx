@@ -9,6 +9,7 @@ import BackToTop from "@/components/back-to-top";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { AdminMessagesSkeleton } from "@/components/loading-skeletons";
 
 interface ContactMessage {
   id: string;
@@ -43,10 +44,22 @@ export default function AdminPage() {
       <PageTransition>
         <div className="bg-dark-bg text-slate-100 font-sans min-h-screen">
           <Navigation />
-          <div className="pt-20 flex items-center justify-center min-h-screen">
-            <div className="text-center">
-              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-accent-blue mx-auto mb-4"></div>
-              <p className="text-slate-400">Loading messages...</p>
+          <div className="pt-20 pb-20">
+            <div className="max-w-7xl mx-auto px-6">
+              <motion.div
+                className="text-center mb-12"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+              >
+                <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                  Admin <span className="gradient-text">Dashboard</span>
+                </h1>
+                <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+                  Loading contact messages...
+                </p>
+              </motion.div>
+              <AdminMessagesSkeleton />
             </div>
           </div>
         </div>
