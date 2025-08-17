@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { useLocation } from "wouter";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [location, setLocation] = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,20 +18,18 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#about", label: "About" },
-    { href: "#projects", label: "Projects" },
-    { href: "#skills", label: "Skills" },
-    { href: "#education", label: "Education" },
-    { href: "#experience", label: "Experience" },
-    { href: "#contact", label: "Contact" },
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/skills", label: "Skills" },
+    { href: "/education", label: "Education" },
+    { href: "/experience", label: "Experience" },
+    { href: "/contact", label: "Contact" },
+    { href: "/portfolio", label: "Full Portfolio" },
   ];
 
   const handleNavClick = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
+    setLocation(href);
     setIsMobileMenuOpen(false);
   };
 
@@ -58,7 +58,11 @@ export default function Navigation() {
                 <motion.button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-slate-300 hover:text-accent-blue transition-colors duration-300"
+                  className={`transition-colors duration-300 ${
+                    location === link.href 
+                      ? "text-accent-blue font-semibold" 
+                      : "text-slate-300 hover:text-accent-blue"
+                  }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -93,7 +97,11 @@ export default function Navigation() {
                 <motion.button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className="text-2xl text-slate-300 hover:text-accent-blue transition-colors duration-300"
+                  className={`text-2xl transition-colors duration-300 ${
+                    location === link.href 
+                      ? "text-accent-blue font-semibold" 
+                      : "text-slate-300 hover:text-accent-blue"
+                  }`}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}

@@ -8,20 +8,25 @@ import Experience from "@/components/experience";
 import Certifications from "@/components/certifications";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
+import PageTransition from "@/components/page-transitions";
+import BackToTop from "@/components/back-to-top";
 
 export default function Portfolio() {
   return (
-    <div className="bg-dark-bg text-slate-100 font-sans overflow-x-hidden">
-      <Navigation />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Education />
-      <Experience />
-      <Certifications />
-      <Contact />
-      <Footer />
-    </div>
+    <PageTransition>
+      <div className="bg-dark-bg text-slate-100 font-sans overflow-x-hidden">
+        <Navigation />
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Education />
+        <Experience />
+        <Certifications />
+        <Contact />
+        <Footer />
+        <BackToTop />
+      </div>
+    </PageTransition>
   );
 }
