@@ -243,17 +243,10 @@ export default function Hero() {
                   className="w-full h-full object-cover"
                 />
               </motion.div>
-              <motion.div
-                className="absolute -bottom-6 -right-6 w-24 h-24 bg-gradient-to-r from-accent-blue to-accent-purple rounded-xl flex items-center justify-center text-2xl"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              >
-                🤖
-              </motion.div>
+
             </div>
           </motion.div>
         </div>
       </div>
     </section>
   );
-}
