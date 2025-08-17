@@ -79,15 +79,37 @@ export default function Navigation() {
                 <motion.button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`transition-colors duration-300 ${
+                  className={`relative px-4 py-2 rounded-lg transition-all duration-300 overflow-hidden ${
                     location === link.href 
                       ? "text-accent-blue font-semibold" 
-                      : "text-slate-300 hover:text-accent-blue"
+                      : "text-slate-300"
                   }`}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{ 
+                    scale: 1.05,
+                    color: "#3B82F6",
+                  }}
                   whileTap={{ scale: 0.95 }}
+                  initial={false}
                 >
-                  {link.label}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-accent-blue/20 to-accent-purple/20 rounded-lg"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileHover={{ 
+                      opacity: 1, 
+                      scale: 1,
+                      transition: { duration: 0.2 }
+                    }}
+                    exit={{ opacity: 0, scale: 0.8 }}
+                  />
+                  <motion.div
+                    className="absolute inset-0 bg-accent-blue/10 rounded-lg"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ 
+                      x: "100%",
+                      transition: { duration: 0.6, ease: "easeInOut" }
+                    }}
+                  />
+                  <span className="relative z-10">{link.label}</span>
                 </motion.button>
               ))}
             </div>
@@ -118,16 +140,38 @@ export default function Navigation() {
                 <motion.button
                   key={link.href}
                   onClick={() => handleNavClick(link.href)}
-                  className={`text-2xl transition-colors duration-300 ${
+                  className={`relative text-2xl px-8 py-3 rounded-xl transition-all duration-300 overflow-hidden ${
                     location === link.href 
                       ? "text-accent-blue font-semibold" 
-                      : "text-slate-300 hover:text-accent-blue"
+                      : "text-slate-300"
                   }`}
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
+                  whileHover={{ 
+                    scale: 1.1,
+                    color: "#3B82F6",
+                  }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  {link.label}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-accent-blue/30 to-accent-purple/30 rounded-xl"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileHover={{ 
+                      opacity: 1, 
+                      scale: 1,
+                      transition: { duration: 0.2 }
+                    }}
+                  />
+                  <motion.div
+                    className="absolute inset-0 bg-white/5 rounded-xl"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ 
+                      x: "100%",
+                      transition: { duration: 0.8, ease: "easeInOut" }
+                    }}
+                  />
+                  <span className="relative z-10">{link.label}</span>
                 </motion.button>
               ))}
             </div>

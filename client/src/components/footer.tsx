@@ -13,13 +13,39 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/skills", label: "Skills" },
-    { href: "/experience", label: "Experience" },
-    { href: "/contact", label: "Contact" },
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
+    { href: "#skills", label: "Skills" },
+    { href: "#experience", label: "Experience" },
+    { href: "#contact", label: "Contact" },
   ];
+
+  const handleFooterNavClick = (href: string) => {
+    // If it's a hash link, scroll to section
+    if (href.startsWith('#')) {
+      // If not on home page, navigate to home first
+      if (location !== '/') {
+        setLocation('/');
+        // Wait for navigation then scroll
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      } else {
+        // Already on home page, just scroll
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    } else {
+      // Regular page navigation
+      setLocation(href);
+    }
+  };
 
   return (
     <footer className="bg-dark-tertiary border-t border-slate-700">
@@ -46,12 +72,46 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-700 hover:bg-accent-blue rounded-lg flex items-center justify-center transition-all duration-300"
-                  whileHover={{ scale: 1.1, y: -2 }}
+                  className="relative w-10 h-10 bg-slate-700 rounded-lg flex items-center justify-center transition-all duration-300 overflow-hidden group"
+                  whileHover={{ 
+                    scale: 1.15, 
+                    y: -4,
+                    rotate: [0, -5, 5, 0],
+                  }}
                   whileTap={{ scale: 0.9 }}
                   aria-label={social.label}
+                  transition={{ 
+                    type: "spring", 
+                    stiffness: 400, 
+                    damping: 10 
+                  }}
                 >
-                  <social.icon size={18} />
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-accent-blue via-accent-purple to-pink-500 rounded-lg"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileHover={{ 
+                      opacity: 1, 
+                      scale: 1,
+                      transition: { duration: 0.2 }
+                    }}
+                  />
+                  <motion.div
+                    className="absolute inset-0 bg-white/10 rounded-lg"
+                    initial={{ x: "-100%", skewX: -45 }}
+                    whileHover={{ 
+                      x: "100%",
+                      transition: { duration: 0.6, ease: "easeInOut" }
+                    }}
+                  />
+                  <motion.div
+                    className="relative z-10"
+                    whileHover={{ 
+                      color: "#ffffff",
+                      scale: 1.1,
+                    }}
+                  >
+                    <social.icon size={18} />
+                  </motion.div>
                 </motion.a>
               ))}
             </div>
@@ -70,15 +130,47 @@ export default function Footer() {
               {quickLinks.map((link, index) => (
                 <li key={index}>
                   <motion.button
-                    onClick={() => setLocation(link.href)}
-                    className={`transition-colors duration-300 ${
+                    onClick={() => handleFooterNavClick(link.href)}
+                    className={`relative group px-3 py-2 rounded-md transition-all duration-300 overflow-hidden ${
                       location === link.href
                         ? "text-accent-blue"
-                        : "text-slate-400 hover:text-slate-200"
+                        : "text-slate-400"
                     }`}
-                    whileHover={{ x: 4 }}
+                    whileHover={{ 
+                      x: 8,
+                      color: "#3B82F6",
+                      scale: 1.05
+                    }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    {link.label}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-accent-blue/10 to-accent-purple/10 rounded-md"
+                      initial={{ opacity: 0, x: "-100%" }}
+                      whileHover={{ 
+                        opacity: 1,
+                        x: 0,
+                        transition: { duration: 0.3 }
+                      }}
+                    />
+                    <motion.div
+                      className="absolute inset-0 bg-accent-blue/5 rounded-md"
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ 
+                        scaleX: 1,
+                        transition: { duration: 0.4, ease: "easeOut" }
+                      }}
+                      style={{ originX: 0 }}
+                    />
+                    <span className="relative z-10">{link.label}</span>
+                    <motion.div
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent-blue to-accent-purple"
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ 
+                        scaleX: 1,
+                        transition: { duration: 0.3, delay: 0.1 }
+                      }}
+                      style={{ originX: 0 }}
+                    />
                   </motion.button>
                 </li>
               ))}
