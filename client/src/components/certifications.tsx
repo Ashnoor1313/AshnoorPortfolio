@@ -47,8 +47,26 @@ export default function Certifications() {
   ];
 
   return (
-    <section id="certifications" className="py-20" ref={ref}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="certifications" className="py-20 relative overflow-hidden" ref={ref}>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-20 left-10 w-2 h-2 bg-accent-purple/70 rounded-full"
+          animate={{ 
+            scale: [1, 4, 1],
+            opacity: [0.7, 1, 0.7],
+            rotate: [0, 180, 360]
+          }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-32 right-20 w-32 h-1 bg-gradient-to-l from-accent-blue/50 to-transparent rotate-45"
+          animate={{ x: [50, -200] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+        />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}

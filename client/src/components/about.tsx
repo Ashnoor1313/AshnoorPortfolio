@@ -7,8 +7,27 @@ export default function About() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-20 bg-dark-secondary" ref={ref}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="about" className="py-20 bg-dark-secondary relative overflow-hidden" ref={ref}>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-20 left-0 w-full h-px bg-gradient-to-r from-transparent via-accent-blue/40 to-transparent"
+          animate={{ scaleX: [0, 1, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-32 right-0 w-full h-px bg-gradient-to-l from-transparent via-accent-purple/40 to-transparent"
+          animate={{ scaleX: [0, 1, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+        />
+        <motion.div
+          className="absolute top-1/2 -left-32 w-64 h-64 bg-accent-blue/5 rounded-full blur-2xl"
+          animate={{ x: [0, 100, 0], y: [0, -50, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}

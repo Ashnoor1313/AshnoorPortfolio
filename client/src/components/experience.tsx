@@ -43,8 +43,22 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-dark-secondary" ref={ref}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="experience" className="py-20 bg-dark-secondary relative overflow-hidden" ref={ref}>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-10 right-0 w-32 h-1 bg-gradient-to-l from-accent-blue/50 to-transparent rotate-45"
+          animate={{ x: [100, -400] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute bottom-40 left-0 w-48 h-px bg-gradient-to-r from-accent-purple/40 to-transparent -rotate-12"
+          animate={{ x: [-200, window.innerWidth + 100] }}
+          transition={{ duration: 16, repeat: Infinity, ease: "linear", delay: 2 }}
+        />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}

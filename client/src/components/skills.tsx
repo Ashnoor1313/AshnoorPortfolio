@@ -77,8 +77,30 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-dark-secondary" ref={ref}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="skills" className="py-20 bg-dark-secondary relative overflow-hidden" ref={ref}>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-16 -left-20 w-56 h-1 bg-gradient-to-r from-accent-blue/50 to-transparent rotate-6"
+          animate={{ x: [-300, window.innerWidth + 300] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute bottom-24 -right-20 w-40 h-2 bg-gradient-to-l from-accent-purple/40 to-transparent -rotate-12"
+          animate={{ x: [window.innerWidth + 200, -300] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "linear", delay: 5 }}
+        />
+        <motion.div
+          className="absolute top-1/3 left-10 w-2 h-2 bg-accent-blue/70 rounded-full"
+          animate={{ 
+            scale: [1, 3, 1],
+            opacity: [0.7, 1, 0.7]
+          }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -98,11 +120,17 @@ export default function Skills() {
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
-              className="bg-dark-tertiary p-6 rounded-xl border border-slate-600 hover:border-accent-blue/50 transition-all duration-300"
+              className="relative bg-dark-tertiary p-6 rounded-xl border border-slate-600 hover:border-accent-blue/50 transition-all duration-300 overflow-hidden"
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.1, duration: 0.8 }}
+              whileHover={{ y: -5 }}
             >
+              <motion.div
+                className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-accent-blue/50 to-transparent"
+                animate={{ x: [-100, 400] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "linear", delay: index * 0.5 }}
+              />
               <div className="flex items-center mb-4">
                 <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-lg flex items-center justify-center mr-4`}>
                   <category.icon className="text-white text-xl" size={24} />

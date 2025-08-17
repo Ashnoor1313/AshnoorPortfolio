@@ -26,8 +26,26 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20" ref={ref}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="education" className="py-20 relative overflow-hidden" ref={ref}>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-40 left-20 w-24 h-1 bg-gradient-to-r from-accent-blue/40 to-transparent rotate-45"
+          animate={{ x: [-100, window.innerWidth + 100] }}
+          transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute bottom-16 right-16 w-3 h-3 bg-accent-purple/60 rounded-full"
+          animate={{ 
+            scale: [1, 2.5, 1],
+            opacity: [0.6, 1, 0.6],
+            rotate: [0, 360]
+          }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}

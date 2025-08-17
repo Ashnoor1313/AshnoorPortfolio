@@ -100,8 +100,37 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-dark-secondary" ref={ref}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="contact" className="py-20 bg-dark-secondary relative overflow-hidden" ref={ref}>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-32 -left-10 w-20 h-20 border border-accent-blue/30 rounded-full"
+          animate={{ 
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3]
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 -right-10 w-16 h-16 bg-accent-purple/20 rotate-45"
+          animate={{ 
+            rotate: [45, 405],
+            y: [0, -30, 0]
+          }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div 
+          className="absolute top-1/4 right-1/4 w-1 h-24 bg-gradient-to-b from-accent-blue/40 to-transparent"
+          animate={{ 
+            scaleY: [1, 1.5, 1],
+            opacity: [0.4, 0.8, 0.4]
+          }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -252,11 +281,21 @@ export default function Contact() {
                 />
               </div>
 
-              <Button
-                type="submit"
-                className="w-full bg-gradient-to-r from-accent-blue to-accent-purple hover:opacity-90 text-white font-medium py-3 px-6 rounded-lg transition-opacity duration-300"
-                disabled={submitContactForm.isPending}
+              <motion.div
+                className="relative overflow-hidden rounded-lg"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
+                  animate={{ x: [-100, 400] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                />
+                <Button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-accent-blue to-accent-purple hover:opacity-90 text-white font-medium py-3 px-6 rounded-lg transition-opacity duration-300 relative z-10"
+                  disabled={submitContactForm.isPending}
+                >
                 {submitContactForm.isPending ? (
                   "Sending..."
                 ) : (
@@ -265,7 +304,8 @@ export default function Contact() {
                     <Send className="ml-2" size={16} />
                   </>
                 )}
-              </Button>
+                </Button>
+              </motion.div>
             </form>
           </motion.div>
         </div>

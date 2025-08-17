@@ -38,8 +38,31 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20" ref={ref}>
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="projects" className="py-20 relative overflow-hidden" ref={ref}>
+      {/* Animated Background Stripes */}
+      <div className="absolute inset-0">
+        <motion.div 
+          className="absolute top-16 -left-20 w-40 h-1 bg-gradient-to-r from-accent-purple/50 to-transparent rotate-12"
+          animate={{ x: [-200, window.innerWidth + 200] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div 
+          className="absolute bottom-20 -right-20 w-60 h-2 bg-gradient-to-l from-accent-blue/40 to-transparent -rotate-6"
+          animate={{ x: [window.innerWidth + 200, -200] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "linear", delay: 3 }}
+        />
+        <motion.div
+          className="absolute top-1/3 right-10 w-3 h-3 bg-accent-purple/60 rounded-full"
+          animate={{ 
+            scale: [1, 2, 1],
+            opacity: [0.6, 1, 0.6],
+            y: [0, -20, 0]
+          }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+      
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
@@ -59,12 +82,18 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className="bg-dark-secondary rounded-xl overflow-hidden border border-slate-700 hover:border-accent-blue/50 transition-all duration-300 group"
+              className="relative bg-dark-secondary rounded-xl overflow-hidden border border-slate-700 hover:border-accent-blue/50 transition-all duration-300 group"
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.2, duration: 0.8 }}
-              whileHover={{ y: -10 }}
+              whileHover={{ y: -10, scale: 1.02 }}
             >
+              {/* Animated border accent */}
+              <motion.div
+                className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-blue to-accent-purple opacity-0 group-hover:opacity-100"
+                animate={{ x: [-100, 400, -100] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear", delay: index * 2 }}
+              />
               <div className="h-48 bg-gradient-to-br from-accent-blue/20 to-accent-purple/20 relative overflow-hidden">
                 <img
                   src={project.image}
