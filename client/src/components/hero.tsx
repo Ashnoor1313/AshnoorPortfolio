@@ -189,7 +189,7 @@ export default function Hero() {
               </motion.button>
               
               <motion.a
-                href="https://your-resume-link.pdf" // 🔗 REPLACE: Add your resume/CV download link here
+                href="https://drive.google.com/file/d/1Ruv7SPMMKLb_66ecxlD76eALdB8SpRQ1/view?usp=sharing" // 🔗 REPLACE: Add your resume/CV download link here
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-accent-blue text-accent-blue hover:bg-accent-blue hover:text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2"
@@ -210,8 +210,8 @@ export default function Hero() {
               {[
                 // 🔗 REPLACE: Update these social media links with your actual profiles
                 { icon: Github, href: "https://github.com/Ashnoor1313" }, // Replace YOUR_USERNAME with your GitHub username
-                { icon: Linkedin, href: "https://www.linkedin.com/in/ashnoor-singh-683640298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" }, // Replace YOUR_USERNAME with your LinkedIn username  
-                { icon: Twitter, href: "https://twitter.com/YOUR_USERNAME" }, // Replace YOUR_USERNAME with your Twitter username
+                { icon: Linkedin, href: "https://www.linkedin.com/in/ashnoor-singh-683640298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app }", // Replace YOUR_USERNAME with your LinkedIn username  
+                { icon: Twitter, href: "https://x.com/Ashnoor1313" }, // Replace YOUR_USERNAME with your Twitter username
               ].map((social, index) => (
                 <motion.a
                   key={index}

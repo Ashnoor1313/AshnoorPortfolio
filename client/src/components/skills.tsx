@@ -59,7 +59,7 @@ export default function Skills() {
       skills: [
         { name: "Docker", level: 80 },
         { name: "AWS", level: 75 },
-        { name: "MLOps", level: 70 },
+        { name: "MLOps", level: 80 },
         { name: "Git", level: 85 },
       ],
     },
@@ -68,9 +68,9 @@ export default function Skills() {
       icon: Wrench,
       color: "from-red-500 to-pink-500",
       skills: [
-        { name: "Generative AI", level: 75 },
-        { name: "Agentic AI", level: 70 },
-        { name: "NLP", level: 75 },
+        { name: "Generative AI", level: 85 },
+        { name: "Agentic AI", level: 80 },
+        { name: "NLP", level: 90 },
         { name: "CNN", level: 85 },
       ],
     },

@@ -33,28 +33,28 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com", // 🔗 REPLACE: Add your actual email address
+      value: "ashnoorchhabra1313@gmail.com", // 🔗 REPLACE: Add your actual email address
       color: "from-accent-blue to-accent-purple",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567", // 🔗 REPLACE: Add your actual phone number
+      value: "+91 9988766184", // 🔗 REPLACE: Add your actual phone number
       color: "from-accent-purple to-pink-500",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Your City, Country", // 🔗 REPLACE: Add your actual location
+      value: "New Delhi, India", // 🔗 REPLACE: Add your actual location
       color: "from-green-500 to-teal-500",
     },
   ];
 
   const socialLinks = [
     // 🔗 REPLACE: Update these social media links with your actual profiles
-    { icon: Github, href: "https://github.com/YOUR_USERNAME", color: "hover:bg-accent-blue" }, // Replace YOUR_USERNAME
-    { icon: Linkedin, href: "https://linkedin.com/in/YOUR_USERNAME", color: "hover:bg-accent-blue" }, // Replace YOUR_USERNAME
-    { icon: Twitter, href: "https://twitter.com/YOUR_USERNAME", color: "hover:bg-accent-purple" }, // Replace YOUR_USERNAME
+    { icon: Github, href: "https://github.com/Ashnoor1313", color: "hover:bg-accent-blue" }, // Replace YOUR_USERNAME
+    { icon: Linkedin, href: "https://www.linkedin.com/in/ashnoor-singh-683640298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", color: "hover:bg-accent-blue" }, // Replace YOUR_USERNAME
+    { icon: Twitter, href: "https://x.com/Ashnoor1313", color: "hover:bg-accent-purple" }, // Replace YOUR_USERNAME
     // 🔗 ADD MORE: Uncomment and add more social platforms as needed
     // { icon: Instagram, href: "https://instagram.com/YOUR_USERNAME", color: "hover:bg-pink-500" },
     // { icon: Youtube, href: "https://youtube.com/@YOUR_CHANNEL", color: "hover:bg-red-500" },

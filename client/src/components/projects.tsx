@@ -15,8 +15,8 @@ export default function Projects() {
       tags: ["Python", "TensorFlow", "Keras", "React", "TypeScript", "Docker"],
       category: "Computer Vision",
       // 🔗 REPLACE: Add your actual project links below
-      github: "https://github.com/YOUR_USERNAME/potato-disease-classifier", // Replace with actual repo URL
-      demo: "https://potato-guard-demo.vercel.app", // Replace with actual demo URL or use "#" if no demo
+      github: "https://github.com/Ashnoor1313/PotatoGuard.git", // Replace with actual repo URL
+      demo: "https://potatoguard.onrender.com", // Replace with actual demo URL or use "#" if no demo
     },
     {
       title: "QR Code Authenticator",
@@ -25,11 +25,11 @@ export default function Projects() {
       tags: ["Python", "TensorFlow", "CNN", "Authentication"],
       category: "AI Security",
       // 🔗 REPLACE: Add your actual project links below
-      github: "https://github.com/YOUR_USERNAME/qr-code-authenticator", // Replace with actual repo URL
-      demo: "https://qr-auth-demo.netlify.app", // Replace with actual demo URL or use "#" if no demo
+      github: "https://github.com/Ashnoor1313/QR-Code-authenticator.git", // Replace with actual repo URL
+      //demo: "https://qr-auth-demo.netlify.app", // Replace with actual demo URL or use "#" if no demo
     },
     {
-      title: "Data Analytics Platform",
+     /* title: "Data Analytics Platform",
       description: "Comprehensive data analysis platform using Python, Excel, and Power BI for extracting actionable insights and supporting strategic decision-making.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
       tags: ["Python", "Power BI", "Excel", "Data Analysis"],
@@ -37,7 +37,7 @@ export default function Projects() {
       // 🔗 REPLACE: Add your actual project links below
       github: "https://github.com/YOUR_USERNAME/data-analytics-platform", // Replace with actual repo URL
       demo: "https://data-platform-demo.herokuapp.com", // Replace with actual demo URL or use "#" if no demo
-    },
+    }*/,
     // 🔗 ADD MORE: Copy the structure above to add more projects
     /*
     {
