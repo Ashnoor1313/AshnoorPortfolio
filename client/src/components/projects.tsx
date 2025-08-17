@@ -28,8 +28,8 @@ export default function Projects() {
       github: "https://github.com/Ashnoor1313/QR-Code-authenticator.git", // Replace with actual repo URL
       //demo: "https://qr-auth-demo.netlify.app", // Replace with actual demo URL or use "#" if no demo
     },
-    {
-     /* title: "Data Analytics Platform",
+    /*{
+      title: "Data Analytics Platform",
       description: "Comprehensive data analysis platform using Python, Excel, and Power BI for extracting actionable insights and supporting strategic decision-making.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
       tags: ["Python", "Power BI", "Excel", "Data Analysis"],
@@ -37,7 +37,7 @@ export default function Projects() {
       // 🔗 REPLACE: Add your actual project links below
       github: "https://github.com/YOUR_USERNAME/data-analytics-platform", // Replace with actual repo URL
       demo: "https://data-platform-demo.herokuapp.com", // Replace with actual demo URL or use "#" if no demo
-    }*/,
+    }*/
     // 🔗 ADD MORE: Copy the structure above to add more projects
     /*
     {
@@ -125,7 +125,7 @@ export default function Projects() {
                 <p className="text-slate-400 mb-4">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, tagIndex) => (
+                  {project.tags?.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
                       className="bg-accent-blue/20 text-accent-blue px-2 py-1 rounded text-sm"
