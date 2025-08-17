@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217.2, 91.2%, 59.8%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --ring: hsl(224.3, 76.3%, 94.1%);
+  --chart-1: hsl(217.2, 91.2%, 59.8%);
+  --chart-2: hsl(139.6, 100%, 32.2%);
+  --chart-3: hsl(44.7, 87%, 47.1%);
+  --chart-4: hsl(138.4, 65%, 39.4%);
+  --chart-5: hsl(341.5, 75.2%, 50.2%);
+  --sidebar: hsl(222.2, 84%, 4.9%);
+  --sidebar-foreground: hsl(210, 40%, 98%);
+  --sidebar-primary: hsl(217.2, 91.2%, 59.8%);
+  --sidebar-primary-foreground: hsl(222.2, 84%, 4.9%);
+  --sidebar-accent: hsl(217.2, 32.6%, 17.5%);
+  --sidebar-accent-foreground: hsl(210, 40%, 98%);
+  --sidebar-border: hsl(217.2, 32.6%, 17.5%);
+  --sidebar-ring: hsl(224.3, 76.3%, 94.1%);
+  
+  /* Custom portfolio colors */
+  --dark-bg: hsl(222, 47%, 5%);
+  --dark-secondary: hsl(220, 39%, 11%);
+  --dark-tertiary: hsl(215, 25%, 17%);
+  --accent-blue: hsl(217, 91%, 60%);
+  --accent-purple: hsl(262, 73%, 66%);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: hsl(222.2, 84%, 4.9%);
+  --foreground: hsl(210, 40%, 98%);
+  --card: hsl(222.2, 84%, 4.9%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --popover: hsl(222.2, 84%, 4.9%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --primary: hsl(217.2, 91.2%, 59.8%);
+  --primary-foreground: hsl(222.2, 84%, 4.9%);
+  --secondary: hsl(217.2, 32.6%, 17.5%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217.2, 32.6%, 17.5%);
+  --muted-foreground: hsl(215, 20.2%, 65.1%);
+  --accent: hsl(217.2, 32.6%, 17.5%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217.2, 32.6%, 17.5%);
+  --input: hsl(217.2, 32.6%, 17.5%);
+  --ring: hsl(224.3, 76.3%, 94.1%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-dark-bg text-slate-100 font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-blue to-accent-purple bg-clip-text text-transparent;
+  }
+
+  .glass-effect {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid hsl(var(--accent-blue) / 0.1);
+  }
+}
+
+@layer utilities {
+  .dark-bg {
+    background-color: var(--dark-bg);
+  }
+  
+  .dark-secondary {
+    background-color: var(--dark-secondary);
+  }
+  
+  .dark-tertiary {
+    background-color: var(--dark-tertiary);
+  }
+  
+  .accent-blue {
+    color: var(--accent-blue);
+  }
+  
+  .accent-purple {
+    color: var(--accent-purple);
+  }
+
+  .bg-dark-bg {
+    background-color: var(--dark-bg);
+  }
+  
+  .bg-dark-secondary {
+    background-color: var(--dark-secondary);
+  }
+  
+  .bg-dark-tertiary {
+    background-color: var(--dark-tertiary);
+  }
+  
+  .text-accent-blue {
+    color: var(--accent-blue);
+  }
+  
+  .text-accent-purple {
+    color: var(--accent-purple);
+  }
+  
+  .border-accent-blue {
+    border-color: var(--accent-blue);
+  }
+  
+  .border-accent-purple {
+    border-color: var(--accent-purple);
+  }
+
+  .bg-accent-blue {
+    background-color: var(--accent-blue);
+  }
+  
+  .bg-accent-purple {
+    background-color: var(--accent-purple);
+  }
+
+  .hover\:bg-accent-blue:hover {
+    background-color: var(--accent-blue);
+  }
+  
+  .hover\:bg-accent-purple:hover {
+    background-color: var(--accent-purple);
+  }
+
+  .hover\:text-accent-blue:hover {
+    color: var(--accent-blue);
+  }
+  
+  .hover\:text-accent-purple:hover {
+    color: var(--accent-purple);
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
