@@ -11,6 +11,7 @@ import EducationPage from "@/pages/education";
 import ExperiencePage from "@/pages/experience";
 import ContactPage from "@/pages/contact";
 import Portfolio from "@/pages/portfolio";
+import AdminPage from "@/pages/admin";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/education" component={EducationPage} />
       <Route path="/experience" component={ExperiencePage} />
       <Route path="/contact" component={ContactPage} />
+      <Route path="/admin" component={AdminPage} />
       <Route component={NotFound} />
     </Switch>
   );
