@@ -6,10 +6,11 @@ export default function Footer() {
   const [location, setLocation] = useLocation();
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/AshnoorSingh", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com/in/ashnoorsingh", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com/Ashnoor1313", label: "Twitter" },
-    { icon: Mail, href: "mailto:ashnoorchhabra1313@gmail.com", label: "Email" },
+    // 🔗 REPLACE: Update these social media links with your actual profiles
+    { icon: Github, href: "https://github.com/YOUR_USERNAME", label: "GitHub" }, // Replace YOUR_USERNAME
+    { icon: Linkedin, href: "https://linkedin.com/in/YOUR_USERNAME", label: "LinkedIn" }, // Replace YOUR_USERNAME
+    { icon: Twitter, href: "https://twitter.com/YOUR_USERNAME", label: "Twitter" }, // Replace YOUR_USERNAME
+    { icon: Mail, href: "mailto:your.email@example.com", label: "Email" }, // Replace with your actual email
   ];
 
   const quickLinks = [

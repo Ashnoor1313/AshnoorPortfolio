@@ -14,8 +14,9 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1518977676601-b53f82aba655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
       tags: ["Python", "TensorFlow", "Keras", "React", "TypeScript", "Docker"],
       category: "Computer Vision",
-      github: "#",
-      demo: "#",
+      // 🔗 REPLACE: Add your actual project links below
+      github: "https://github.com/YOUR_USERNAME/potato-disease-classifier", // Replace with actual repo URL
+      demo: "https://potato-guard-demo.vercel.app", // Replace with actual demo URL or use "#" if no demo
     },
     {
       title: "QR Code Authenticator",
@@ -23,8 +24,9 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
       tags: ["Python", "TensorFlow", "CNN", "Authentication"],
       category: "AI Security",
-      github: "#",
-      demo: "#",
+      // 🔗 REPLACE: Add your actual project links below
+      github: "https://github.com/YOUR_USERNAME/qr-code-authenticator", // Replace with actual repo URL
+      demo: "https://qr-auth-demo.netlify.app", // Replace with actual demo URL or use "#" if no demo
     },
     {
       title: "Data Analytics Platform",
@@ -32,9 +34,22 @@ export default function Projects() {
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
       tags: ["Python", "Power BI", "Excel", "Data Analysis"],
       category: "Data Science",
-      github: "#",
-      demo: "#",
+      // 🔗 REPLACE: Add your actual project links below
+      github: "https://github.com/YOUR_USERNAME/data-analytics-platform", // Replace with actual repo URL
+      demo: "https://data-platform-demo.herokuapp.com", // Replace with actual demo URL or use "#" if no demo
     },
+    // 🔗 ADD MORE: Copy the structure above to add more projects
+    /*
+    {
+      title: "Your New Project",
+      description: "Description of your project...",
+      image: "https://your-image-url.com/image.jpg", // Replace with actual project screenshot
+      tags: ["Technology", "Stack", "Used"],
+      category: "Project Category",
+      github: "https://github.com/YOUR_USERNAME/your-project", // Replace with actual repo
+      demo: "https://your-demo.com", // Replace with actual demo or use "#"
+    },
+    */
   ];
 
   return (

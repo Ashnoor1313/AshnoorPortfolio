@@ -33,27 +33,31 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "ashnoorchhabra1313@gmail.com",
+      value: "your.email@example.com", // 🔗 REPLACE: Add your actual email address
       color: "from-accent-blue to-accent-purple",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 9988766184",
+      value: "+1 (555) 123-4567", // 🔗 REPLACE: Add your actual phone number
       color: "from-accent-purple to-pink-500",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "New Delhi, India",
+      value: "Your City, Country", // 🔗 REPLACE: Add your actual location
       color: "from-green-500 to-teal-500",
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com/AshnoorSingh", color: "hover:bg-accent-blue" },
-    { icon: Linkedin, href: "https://linkedin.com/in/ashnoorsingh", color: "hover:bg-accent-blue" },
-    { icon: Twitter, href: "https://twitter.com/Ashnoor1313", color: "hover:bg-accent-purple" },
+    // 🔗 REPLACE: Update these social media links with your actual profiles
+    { icon: Github, href: "https://github.com/YOUR_USERNAME", color: "hover:bg-accent-blue" }, // Replace YOUR_USERNAME
+    { icon: Linkedin, href: "https://linkedin.com/in/YOUR_USERNAME", color: "hover:bg-accent-blue" }, // Replace YOUR_USERNAME
+    { icon: Twitter, href: "https://twitter.com/YOUR_USERNAME", color: "hover:bg-accent-purple" }, // Replace YOUR_USERNAME
+    // 🔗 ADD MORE: Uncomment and add more social platforms as needed
+    // { icon: Instagram, href: "https://instagram.com/YOUR_USERNAME", color: "hover:bg-pink-500" },
+    // { icon: Youtube, href: "https://youtube.com/@YOUR_CHANNEL", color: "hover:bg-red-500" },
   ];
 
   const submitContactForm = useMutation({
