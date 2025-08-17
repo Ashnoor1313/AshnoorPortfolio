@@ -209,8 +209,8 @@ export default function Hero() {
             >
               {[
                 // 🔗 REPLACE: Update these social media links with your actual profiles
-                { icon: Github, href: "https://github.com/YOUR_USERNAME" }, // Replace YOUR_USERNAME with your GitHub username
-                { icon: Linkedin, href: "https://linkedin.com/in/YOUR_USERNAME" }, // Replace YOUR_USERNAME with your LinkedIn username  
+                { icon: Github, href: "https://github.com/Ashnoor1313" }, // Replace YOUR_USERNAME with your GitHub username
+                { icon: Linkedin, href: "https://www.linkedin.com/in/ashnoor-singh-683640298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app }", // Replace YOUR_USERNAME with your LinkedIn username  
                 { icon: Twitter, href: "https://twitter.com/YOUR_USERNAME" }, // Replace YOUR_USERNAME with your Twitter username
               ].map((social, index) => (
                 <motion.a
