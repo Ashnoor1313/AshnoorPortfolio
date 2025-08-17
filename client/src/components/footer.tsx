@@ -26,7 +26,7 @@ export default function Footer() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-slate-400">
-              © 2024 <span className="gradient-text font-semibold">AI Engineer</span>. All rights reserved.
+              © 2024 <span className="gradient-text font-semibold">Ashnoor Singh</span>. All rights reserved.
             </p>
           </motion.div>
           

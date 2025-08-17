@@ -38,7 +38,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Hi, I'm <span className="gradient-text">Alex</span>
+              Hi, I'm <span className="gradient-text">Ashnoor Singh</span>
             </motion.h1>
             
             <motion.h2
@@ -56,8 +56,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              Passionate about artificial intelligence and machine learning. Currently pursuing B.Tech CSE from GGSIPU, 
-              dedicated to building innovative AI solutions that make a difference.
+              Passionate about AI, Machine Learning, and Computer Vision. Currently pursuing B.Tech CSE from GGSIPU with 
+              a CGPA of 9.28, dedicated to building innovative AI solutions and leading technical teams.
             </motion.p>
 
             <motion.div
@@ -94,9 +94,9 @@ export default function Hero() {
               transition={{ delay: 1, duration: 0.8 }}
             >
               {[
-                { icon: Github, href: "https://github.com" },
-                { icon: Linkedin, href: "https://linkedin.com" },
-                { icon: Twitter, href: "https://twitter.com" },
+                { icon: Github, href: "https://github.com/AshnoorSingh" },
+                { icon: Linkedin, href: "https://linkedin.com/in/ashnoorsingh" },
+                { icon: Twitter, href: "https://twitter.com/Ashnoor1313" },
               ].map((social, index) => (
                 <motion.a
                   key={index}

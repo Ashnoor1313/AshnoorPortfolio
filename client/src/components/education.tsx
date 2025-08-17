@@ -17,12 +17,12 @@ export default function Education() {
   ];
 
   const achievements = [
-    { name: "Dean's List - 2022, 2023", icon: Trophy },
-    { name: "AI/ML Project Competition Winner", icon: Medal },
-    { name: "Top 5% in Data Structures Course", icon: Star },
-    { name: "Technical Society Member", icon: Users },
-    { name: "Hackathon Participant (Multiple)", icon: Code },
-    { name: "Research Paper Published", icon: Book },
+    { name: "CGPA: 9.28/10 - Outstanding Academic Performance", icon: Trophy },
+    { name: "AI Masters Lead at IEEE GTBIT", icon: Medal },
+    { name: "Outstanding Team Lead Recognition", icon: Star },
+    { name: "Data Science and Analytics Certified", icon: Users },
+    { name: "Python and Machine Learning Certified", icon: Code },
+    { name: "Led Cross-functional Team of 15 Members", icon: Book },
   ];
 
   return (
@@ -62,24 +62,24 @@ export default function Education() {
                     Bachelor of Technology - Computer Science Engineering
                   </h3>
                   <span className="bg-accent-blue/20 text-accent-blue px-3 py-1 rounded-full text-sm font-medium">
-                    2021 - 2025
+                    Sept 2023 - Aug 2027
                   </span>
                 </div>
                 <p className="text-xl text-slate-300 mb-2">
                   Guru Gobind Singh Indraprastha University (GGSIPU)
                 </p>
-                <p className="text-slate-400 mb-4">Delhi, India</p>
+                <p className="text-slate-400 mb-4">New Delhi, India</p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <p className="text-slate-300"><strong>CGPA:</strong> 8.5/10</p>
+                    <p className="text-slate-300"><strong>CGPA:</strong> 9.28/10</p>
                     <p className="text-slate-300">
                       <strong>Specialization:</strong> Artificial Intelligence & Machine Learning
                     </p>
                   </div>
                   <div>
-                    <p className="text-slate-300"><strong>Expected Graduation:</strong> May 2025</p>
+                    <p className="text-slate-300"><strong>Expected Graduation:</strong> August 2027</p>
                     <p className="text-slate-300">
-                      <strong>Relevant Coursework:</strong> Data Structures, Algorithms, ML, AI
+                      <strong>Coursework:</strong> Machine Learning, Data Structures, OS, DBMS
                     </p>
                   </div>
                 </div>
@@ -88,6 +88,26 @@ export default function Education() {
           </motion.div>
 
           {/* Courses and Achievements */}
+          {/* Previous Education */}
+          <motion.div
+            className="bg-dark-secondary p-6 rounded-xl border border-slate-600 hover:border-accent-blue/50 transition-all duration-300 mb-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+              <h3 className="text-xl font-bold text-accent-purple">
+                Class X & XII - CBSE Board
+              </h3>
+              <span className="bg-accent-purple/20 text-accent-purple px-3 py-1 rounded-full text-sm font-medium">
+                April 2008 - March 2023
+              </span>
+            </div>
+            <p className="text-lg text-slate-300 mb-2">Sacred Heart Senior Secondary School</p>
+            <p className="text-slate-400 mb-2">Punjab, India</p>
+            <p className="text-slate-300"><strong>CGPA:</strong> 9+</p>
+          </motion.div>
+
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               className="bg-dark-secondary p-6 rounded-xl border border-slate-600"

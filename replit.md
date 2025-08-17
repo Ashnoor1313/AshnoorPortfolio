@@ -1,8 +1,18 @@
-# Portfolio Website
+# Ashnoor Singh - Portfolio Website
 
 ## Overview
 
-This is a modern, full-stack portfolio website built for showcasing an AI/ML engineer's work and experience. The application features a dark-themed, animated frontend with sections for about, projects, skills, education, experience, certifications, and contact information. It includes a contact form with backend API integration for message storage and retrieval.
+This is a professional, full-stack portfolio website built for Ashnoor Singh, an AI/ML engineering student from GGSIPU. The application features a dark-themed, animated frontend showcasing real projects, experience, and achievements. It includes sections for about, projects, skills, education, experience, certifications, and contact information with a functional contact form and backend API integration.
+
+## Recent Changes (January 2025)
+
+✓ Updated all portfolio content with authentic data from Ashnoor's resume
+✓ Added real project information: PotatoGuard (Potato Disease Classifier), QR Code Authenticator
+✓ Integrated actual work experience: Data Analyst Intern at To Let Globe, AI Masters Lead at IEEE GTBIT
+✓ Updated education details: GGSIPU B.Tech CSE (2023-2027) with 9.28 CGPA
+✓ Added authentic certifications: Data Science and Analytics, Python and Machine Learning
+✓ Updated contact information and social media links for Ashnoor Singh
+✓ Personalized skills section based on actual technical expertise
 
 ## User Preferences
 

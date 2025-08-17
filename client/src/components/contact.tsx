@@ -33,28 +33,27 @@ export default function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
+      value: "ashnoorchhabra1313@gmail.com",
       color: "from-accent-blue to-accent-purple",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 98765 43210",
+      value: "+91 9988766184",
       color: "from-accent-purple to-pink-500",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "Delhi, India",
+      value: "New Delhi, India",
       color: "from-green-500 to-teal-500",
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", color: "hover:bg-accent-blue" },
-    { icon: Linkedin, href: "https://linkedin.com", color: "hover:bg-accent-blue" },
-    { icon: Twitter, href: "https://twitter.com", color: "hover:bg-accent-purple" },
-    { icon: Instagram, href: "https://instagram.com", color: "hover:bg-pink-500" },
+    { icon: Github, href: "https://github.com/AshnoorSingh", color: "hover:bg-accent-blue" },
+    { icon: Linkedin, href: "https://linkedin.com/in/ashnoorsingh", color: "hover:bg-accent-blue" },
+    { icon: Twitter, href: "https://twitter.com/Ashnoor1313", color: "hover:bg-accent-purple" },
   ];
 
   const submitContactForm = useMutation({

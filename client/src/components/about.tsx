@@ -29,14 +29,14 @@ export default function About() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <p className="text-lg text-slate-300 leading-relaxed">
-              I'm a passionate Computer Science student at Guru Gobind Singh Indraprastha University (GGSIPU), 
-              specializing in Artificial Intelligence and Machine Learning. My journey began with curiosity about 
-              how machines can learn and think, leading me to dive deep into neural networks, deep learning, and AI applications.
+              I'm a dedicated Computer Science student at Guru Gobind Singh Indraprastha University (GGSIPU) with a strong 
+              CGPA of 9.28. My journey in AI and Machine Learning began with a fascination for how intelligent systems can 
+              solve real-world problems, leading me to explore deep learning, computer vision, and generative AI.
             </p>
             <p className="text-lg text-slate-300 leading-relaxed">
-              Currently in my B.Tech CSE program, I've developed expertise in Python, TensorFlow, PyTorch, and various 
-              AI frameworks. I'm particularly interested in computer vision, natural language processing, and their 
-              real-world applications in solving complex problems.
+              As an AI Masters Lead at IEEE GTBIT and with hands-on experience as a Data Analyst Intern, I've developed 
+              expertise in Python, TensorFlow, Keras, and full-stack development. I'm passionate about creating AI solutions 
+              that make a meaningful impact, from disease classification systems to authentication technologies.
             </p>
             
             <div className="grid grid-cols-2 gap-6 pt-4">
@@ -69,11 +69,11 @@ export default function About() {
               <h3 className="text-xl font-semibold mb-4 text-accent-blue">Personal Details</h3>
               <div className="space-y-3">
                 {[
-                  { label: "Name", value: "Alex Johnson" },
+                  { label: "Name", value: "Ashnoor Singh" },
                   { label: "Degree", value: "B.Tech CSE" },
                   { label: "University", value: "GGSIPU" },
-                  { label: "Location", value: "Delhi, India" },
-                  { label: "Email", value: "alex@example.com" },
+                  { label: "Location", value: "New Delhi, India" },
+                  { label: "Email", value: "ashnoorchhabra1313@gmail.com" },
                 ].map((detail, index) => (
                   <motion.div
                     key={index}
@@ -97,8 +97,8 @@ export default function About() {
             >
               <h3 className="text-xl font-semibold mb-4">What drives me</h3>
               <p className="text-slate-300">
-                "I believe AI has the potential to solve humanity's greatest challenges. Every line of code I write 
-                is a step towards creating intelligent systems that can make the world a better place."
+                "I believe in the transformative power of AI and machine learning to solve complex real-world problems. 
+                My goal is to bridge the gap between cutting-edge research and practical applications that benefit society."
               </p>
             </motion.div>
           </motion.div>
