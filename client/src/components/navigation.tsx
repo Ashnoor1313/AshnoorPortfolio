@@ -18,17 +18,39 @@ export default function Navigation() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/projects", label: "Projects" },
-    { href: "/skills", label: "Skills" },
-    { href: "/education", label: "Education" },
-    { href: "/experience", label: "Experience" },
-    { href: "/contact", label: "Contact" },
+    { href: "#home", label: "Home" },
+    { href: "#about", label: "About" },
+    { href: "#projects", label: "Projects" },
+    { href: "#skills", label: "Skills" },
+    { href: "#education", label: "Education" },
+    { href: "#experience", label: "Experience" },
+    { href: "#contact", label: "Contact" },
   ];
 
   const handleNavClick = (href: string) => {
-    setLocation(href);
+    // If it's a hash link, scroll to section
+    if (href.startsWith('#')) {
+      // If not on home page, navigate to home first
+      if (location !== '/') {
+        setLocation('/');
+        // Wait for navigation then scroll
+        setTimeout(() => {
+          const element = document.querySelector(href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      } else {
+        // Already on home page, just scroll
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    } else {
+      // Regular page navigation
+      setLocation(href);
+    }
     setIsMobileMenuOpen(false);
   };
 
