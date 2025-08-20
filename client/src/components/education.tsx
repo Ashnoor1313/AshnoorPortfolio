@@ -26,7 +26,7 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 relative overflow-hidden" ref={ref}>
+    <section id="education" className="py-20 relative overflow-hidden scroll-mt-20" ref={ref}>
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <motion.div 

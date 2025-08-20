@@ -53,7 +53,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 relative overflow-hidden" ref={ref}>
+    <section id="projects" className="py-20 relative overflow-hidden scroll-mt-20" ref={ref}>
       {/* Animated Background Stripes */}
       <div className="absolute inset-0">
         <motion.div 
@@ -138,20 +138,26 @@ export default function Projects() {
                 <div className="flex space-x-4">
                   <motion.a
                     href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-accent-blue hover:text-blue-400 transition-colors flex items-center gap-2"
                     whileHover={{ scale: 1.05 }}
                   >
                     <Github size={16} />
                     Code
                   </motion.a>
-                  <motion.a
-                    href={project.demo}
-                    className="text-accent-purple hover:text-purple-400 transition-colors flex items-center gap-2"
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <ExternalLink size={16} />
-                    Demo
-                  </motion.a>
+                  {project.demo && (
+                    <motion.a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent-purple hover:text-purple-400 transition-colors flex items-center gap-2"
+                      whileHover={{ scale: 1.05 }}
+                    >
+                      <ExternalLink size={16} />
+                      Demo
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -165,7 +171,7 @@ export default function Projects() {
           transition={{ delay: 0.8 }}
         >
           <motion.a
-            href="https://github.com"
+            href="https://github.com/Ashnoor1313"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-gradient-to-r from-accent-blue to-accent-purple text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity duration-300 inline-flex items-center gap-2"

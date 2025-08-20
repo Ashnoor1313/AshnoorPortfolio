@@ -43,7 +43,7 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-dark-secondary relative overflow-hidden" ref={ref}>
+    <section id="experience" className="py-20 bg-dark-secondary relative overflow-hidden scroll-mt-20" ref={ref}>
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <motion.div 
