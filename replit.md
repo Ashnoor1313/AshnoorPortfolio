@@ -17,6 +17,10 @@ This is a professional, full-stack portfolio website built for Ashnoor Singh, an
 ✓ Implemented PostgreSQL database with proper schema for secure message storage
 ✓ Enhanced contact form responsiveness for mobile and tablet devices
 ✓ Fixed syntax errors in Hero and Projects components
+✓ Connected GitHub repositories to projects section with proper links
+✓ Fixed navbar scrolling and overlap issues with proper section spacing
+✓ Created production-ready Dockerfile and deployment configuration for Render
+✓ Added comprehensive deployment documentation and environment setup
 
 ## User Preferences
 
