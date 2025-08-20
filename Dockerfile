@@ -1,37 +1,43 @@
 # Use Node.js 20 LTS
 FROM node:20-alpine
 
-# Install dependencies needed for building
+# Install build tools
 RUN apk add --no-cache python3 make g++
 
-# Set working directory
-WORKDIR /app
+# Set working directory for client
+WORKDIR /app/client
 
-# Copy package files
-COPY package*.json ./
+# Copy package files for client
+COPY client/package*.json ./
 
-# Install all dependencies (including devDependencies for build)
+# Install dependencies
 RUN npm ci
 
-# Copy source code
-COPY . .
+# Copy client source code
+COPY client ./
 
-# Build the application
+# Build the Vite app
 RUN npm run build
 
-# Remove dev dependencies after build
-RUN npm prune --production
+# Move up to root to handle server.js
+WORKDIR /app
 
-# Expose port (Render will provide PORT env variable)
+# Copy server files and built client
+COPY server.js ./
+COPY --from=0 /app/client/dist ./dist
+
+# Install only production dependencies for server
+COPY package*.json ./
+RUN npm install --omit=dev
+
+# Expose port
 EXPOSE 5000
-
-# Set environment to production
 ENV NODE_ENV=production
 
-# Create non-root user for security
+# Create non-root user
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 USER nextjs
 
-# Start the application
-CMD ["npm", "start"]
+# Start server
+CMD ["node", "server.js"]
