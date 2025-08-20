@@ -373,67 +373,7 @@ export function ContactFormSkeleton() {
   );
 }
 
-// Admin Messages Skeleton
-export function AdminMessagesSkeleton() {
-  return (
-    <div className="grid lg:grid-cols-3 gap-8">
-      <div className="lg:col-span-2">
-        <div className="bg-dark-secondary border border-slate-600 rounded-lg">
-          <div className="p-6 border-b border-slate-600">
-            <div className="flex items-center gap-2">
-              <Skeleton className="w-6 h-6" />
-              <Skeleton className="h-6 w-48" />
-            </div>
-          </div>
-          <div className="p-6">
-            <div className="space-y-4">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="p-4 rounded-lg border border-slate-600 bg-dark-tertiary">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
-                        <Skeleton className="w-4 h-4" />
-                        <Skeleton className="h-4 w-32" />
-                        <Skeleton className="h-4 w-24" />
-                      </div>
-                      <Skeleton className="h-5 w-3/4 mb-2" />
-                      <div className="space-y-1">
-                        <Skeleton className="h-3 w-full" />
-                        <Skeleton className="h-3 w-5/6" />
-                      </div>
-                      <div className="flex items-center gap-2 mt-3">
-                        <Skeleton className="w-3 h-3" />
-                        <Skeleton className="h-3 w-32" />
-                      </div>
-                    </div>
-                    <Skeleton className="w-8 h-8" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <div className="lg:col-span-1">
-        <div className="bg-dark-secondary border border-slate-600 rounded-lg sticky top-24">
-          <div className="p-6 border-b border-slate-600">
-            <div className="flex items-center gap-2">
-              <Skeleton className="w-6 h-6" />
-              <Skeleton className="h-6 w-32" />
-            </div>
-          </div>
-          <div className="p-6">
-            <div className="text-center py-8">
-              <Skeleton className="w-12 h-12 mx-auto mb-4" />
-              <Skeleton className="h-4 w-40 mx-auto" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
+
 
 // Generic Page Loading Skeleton
 export function PageLoadingSkeleton() {
