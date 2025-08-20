@@ -7,10 +7,10 @@ export default function Footer() {
 
   const socialLinks = [
     // 🔗 REPLACE: Update these social media links with your actual profiles
-    { icon: Github, href: "https://github.com/YOUR_USERNAME", label: "GitHub" }, // Replace YOUR_USERNAME
-    { icon: Linkedin, href: "https://linkedin.com/in/YOUR_USERNAME", label: "LinkedIn" }, // Replace YOUR_USERNAME
-    { icon: Twitter, href: "https://twitter.com/YOUR_USERNAME", label: "Twitter" }, // Replace YOUR_USERNAME
-    { icon: Mail, href: "mailto:your.email@example.com", label: "Email" }, // Replace with your actual email
+    { icon: Github, href: "https://github.com/Ashnoor1313", label: "GitHub" }, // Replace YOUR_USERNAME
+    { icon: Linkedin, href: "https://www.linkedin.com/in/ashnoor-singh-683640298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", color: "hover:bg-accent-blue", label: "LinkedIn" }, // Replace YOUR_USERNAME
+    { icon: Twitter, href: "https://x.com/Ashnoor1313", label: "Twitter" }, // Replace YOUR_USERNAME
+    { icon: Mail, href: "ashnoorchhabra1313@gmail.com", label: "Email" }, // Replace with your actual email
   ];
 
   const quickLinks = [
@@ -211,11 +211,6 @@ export default function Footer() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="flex items-center space-x-2 text-slate-400 mb-4 md:mb-0">
-            <span>Made with</span>
-            <Heart size={16} className="text-red-500" fill="currentColor" />
-            <span>by Ashnoor Singh</span>
-          </div>
           
           <div className="text-slate-400 text-sm">
             <p>&copy; {new Date().getFullYear()} Ashnoor Singh. All rights reserved.</p>

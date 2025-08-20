@@ -16,15 +16,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Get all contact messages (for admin purposes)
-  app.get("/api/contact-messages", async (req, res) => {
-    try {
-      const messages = await storage.getContactMessages();
-      res.json(messages);
-    } catch (error: any) {
-      res.status(500).json({ error: error.message });
-    }
-  });
+
 
   const httpServer = createServer(app);
   return httpServer;

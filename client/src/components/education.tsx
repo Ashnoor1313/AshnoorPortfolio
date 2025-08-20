@@ -17,7 +17,7 @@ export default function Education() {
   ];
 
   const achievements = [
-    { name: "CGPA: 9.28/10 - Outstanding Academic Performance", icon: Trophy },
+    { name: "CGPA: 9.28 - Outstanding Academic Performance", icon: Trophy },
     { name: "AI Masters Lead at IEEE GTBIT", icon: Medal },
     { name: "Outstanding Team Lead Recognition", icon: Star },
     { name: "Data Science and Analytics Certified", icon: Users },
@@ -89,9 +89,9 @@ export default function Education() {
                 <p className="text-slate-400 mb-4">New Delhi, India</p>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <p className="text-slate-300"><strong>CGPA:</strong> 9.28/10</p>
+                    <p className="text-slate-300"><strong>CGPA:</strong> 9.28</p>
                     <p className="text-slate-300">
-                      <strong>Specialization:</strong> Artificial Intelligence & Machine Learning
+                      <strong></strong> 
                     </p>
                   </div>
                   <div>
