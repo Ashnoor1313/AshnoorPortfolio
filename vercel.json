@@ -1,7 +1,14 @@
 {
-  // Use Vercel static build: Vite builds to dist/public
-  "buildCommand": "npm ci && npm run build",
-  "outputDirectory": "dist/public",
-  "ignoreCommand": "echo Using static client; server runs elsewhere",
-  "trailingSlash": false
+  "version": 2,
+  "public": true,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/public" }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
