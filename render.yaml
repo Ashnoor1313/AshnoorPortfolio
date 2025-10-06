@@ -12,7 +12,8 @@ services:
         fromDatabase:
           name: portfolio-db
           property: connectionString
-    autoDeploy: false
+    autoDeploy: true
+    healthCheckPath: /
 
 databases:
   - name: portfolio-db

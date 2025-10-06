@@ -1,5 +1,9 @@
 # 🚀 Deployment Instructions for Ashnoor Singh Portfolio
 
+> **✅ DEPLOYMENT READY - All configuration issues fixed!**
+> 
+> **📘 See [RENDER_DEPLOY.md](./RENDER_DEPLOY.md) for complete step-by-step guide**
+
 ## Quick Deploy to Render
 
 ### Step 1: Prepare Repository

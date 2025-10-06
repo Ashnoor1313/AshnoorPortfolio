@@ -4,31 +4,20 @@ FROM node:20-alpine
 # Install build tools
 RUN apk add --no-cache python3 make g++
 
-# Set working directory for client
-WORKDIR /app/client
+# Set working directory
+WORKDIR /app
 
-# Copy package files for client
-COPY client/package*.json ./
+# Copy package files
+COPY package*.json ./
 
 # Install dependencies
 RUN npm ci
 
-# Copy client source code
-COPY client ./
+# Copy all source code
+COPY . .
 
-# Build the Vite app
+# Build both frontend and backend
 RUN npm run build
-
-# Move up to root to handle server.js
-WORKDIR /app
-
-# Copy server files and built client
-COPY server.js ./
-COPY --from=0 /app/client/dist ./dist
-
-# Install only production dependencies for server
-COPY package*.json ./
-RUN npm install --omit=dev
 
 # Expose port
 EXPOSE 5000
@@ -36,8 +25,8 @@ ENV NODE_ENV=production
 
 # Create non-root user
 RUN addgroup -g 1001 -S nodejs
-RUN adduser -S nextjs -u 1001
-USER nextjs
+RUN adduser -S nodejs -u 1001
+USER nodejs
 
-# Start server
-CMD ["node", "server.js"]
+# Start server (built backend is at dist/index.js)
+CMD ["node", "dist/index.js"]
