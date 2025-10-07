@@ -7,7 +7,6 @@ services:
     autoDeploy: true
     buildCommand: npm ci && npm run build
     startCommand: npm start
-    postDeployCommand: npm run db:push
     healthCheckPath: /healthz
     envVars:
       - key: NODE_ENV
