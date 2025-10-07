@@ -8,7 +8,7 @@ services:
     buildCommand: npm ci && npm run build
     startCommand: npm start
     postDeployCommand: npm run db:push
-    healthCheckPath: /
+    healthCheckPath: /healthz
     envVars:
       - key: NODE_ENV
         value: production
