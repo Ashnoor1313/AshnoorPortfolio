@@ -30,7 +30,7 @@ export const getQueryFn: <T>(options: {
   on401: UnauthorizedBehavior;
 }) => QueryFunction<T> =
   ({ on401: unauthorizedBehavior }) =>
-  async ({ queryKey }) => {
+  async ({ queryKey }: { queryKey: readonly string[] }) => {
     const apiBase = import.meta.env.VITE_API_BASE || "";
     const path = queryKey.join("/") as string;
     const resolvedUrl = path.startsWith("/") ? `${apiBase}${path}` : path;

@@ -153,55 +153,14 @@ export default function Footer() {
                         transition: { duration: 0.3 }
                       }}
                     />
-                    <motion.div
-                      className="absolute inset-0 bg-accent-blue/5 rounded-md"
-                      initial={{ scaleX: 0 }}
-                      whileHover={{ 
-                        scaleX: 1,
-                        transition: { duration: 0.4, ease: "easeOut" }
-                      }}
-                      style={{ originX: 0 }}
-                    />
                     <span className="relative z-10">{link.label}</span>
-                    <motion.div
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-accent-blue to-accent-purple"
-                      initial={{ scaleX: 0 }}
-                      whileHover={{ 
-                        scaleX: 1,
-                        transition: { duration: 0.3, delay: 0.1 }
-                      }}
-                      style={{ originX: 0 }}
-                    />
                   </motion.button>
                 </li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <h4 className="text-lg font-semibold mb-4 text-slate-200">
-              Get In Touch
-            </h4>
-            <div className="space-y-3 text-slate-400">
-              <p>
-                <span className="font-medium">Email:</span><br />
-                ashnoorchhabra1313@gmail.com
-              </p>
-              <p>
-                <span className="font-medium">Phone:</span><br />
-                +91 9988766184
-              </p>
-              <p>
-                <span className="font-medium">Location:</span><br />
-                New Delhi, India
-              </p>
-            </div>
-          </motion.div>
+          {/* Contact Info removed as requested */}
         </div>
 
         {/* Bottom Section */}

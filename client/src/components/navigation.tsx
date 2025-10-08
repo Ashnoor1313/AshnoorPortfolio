@@ -24,7 +24,6 @@ export default function Navigation() {
     { href: "#skills", label: "Skills" },
     { href: "#education", label: "Education" },
     { href: "#experience", label: "Experience" },
-    { href: "#contact", label: "Contact" },
   ];
 
   const handleNavClick = (href: string) => {
