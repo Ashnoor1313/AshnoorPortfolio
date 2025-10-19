@@ -38,6 +38,7 @@ export function AIBackground() {
       baseY: number;
 
       constructor() {
+        if (!canvas) return;
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
         this.baseX = this.x;
@@ -49,6 +50,7 @@ export function AIBackground() {
       }
 
       update() {
+        if (!canvas) return;
         const dx = mouseRef.current.x - this.x;
         const dy = mouseRef.current.y - this.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
