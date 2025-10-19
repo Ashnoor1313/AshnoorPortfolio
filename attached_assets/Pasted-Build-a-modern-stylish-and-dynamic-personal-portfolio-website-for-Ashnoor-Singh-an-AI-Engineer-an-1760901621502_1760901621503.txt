@@ -1,0 +1,82 @@
+Build a modern, stylish, and dynamic personal portfolio website for Ashnoor Singh, an AI Engineer and Data Scientist.
+
+The design should have a cutting-edge AI aesthetic — sleek animations, glowing accents, gradients, and glassmorphism effects. Use a dark modern theme with highlights in electric blue and neon purple to represent AI and tech innovation. The layout should be clean, responsive, and professional with creative interactions.
+
+The website should have the following sections:
+
+🧠 1. Home / Hero Section
+
+Headline: “Hi, I’m Ashnoor Singh — AI Engineer & Innovator.”
+
+Subheadline: “Transforming ideas into intelligent solutions with Machine Learning, NLP, and Generative AI.”
+
+Add a “View Projects” button and a dynamic AI-themed animation (like neural networks or particles moving).
+
+Include a minimalist professional photo placeholder.
+
+👨‍💻 2. About Me
+
+Briefly introduce Ashnoor as an AI Engineer passionate about applying deep learning, NLP, and computer vision to real-world challenges.
+
+Highlight his education: B.Tech in Computer Science from Guru Gobind Singh Indraprastha University (2023–2027) with a CGPA of 9.28.
+
+Mention his interest in building full-stack AI systems with React, FastAPI, TensorFlow, and LangChain.
+
+Add a quote or tagline inspired by AI innovation.
+
+💼 3. Experience
+
+Data Science Intern – Hukkido (Jul 2025 – Sep 2025)
+Worked on data scraping, cleaning, and ML model building using TensorFlow, PyTorch, and NLP techniques.
+
+Data Analyst Intern – To Let Globe (May 2024 – Jul 2024)
+Led a 15-member team, performed analysis using Python, Excel, and Power BI, and optimized business operations.
+
+🧩 4. Projects
+
+PotatoGuard (2025): AI-based leaf disease diagnosis system (95% accuracy) using CNN with TensorFlow and React full-stack deployment on Docker & Render.
+
+QR Code Authenticator (2025): CNN-based QR verification system with 97% accuracy for real-time security validation.
+
+QuerySense (2025): NLP + LLM-powered intelligent document search built using FastAPI, LangChain, and React.
+Include buttons linking to GitHub repositories for each project.
+
+🧰 5. Skills
+
+Display skills in visually grouped tags or progress bars:
+
+Programming: Python, Java, C++, JavaScript
+
+AI/ML: Deep Learning, NLP, Computer Vision, Generative AI, Agentic AI
+
+Frameworks: TensorFlow, PyTorch, Hugging Face, LangChain, LlamaIndex
+
+Tools: Docker, GCP, AWS, Figma
+
+Databases: SQL, Pinecone, FAISS, Chroma
+
+Add a subtle animation or hover effect for each skill category.
+
+📞 6. Contact Me
+
+Heading: “Let’s Collaborate!”
+
+Include only contact details (no form):
+
+📧 Email: ashnoorchhabra1313@gmail.com
+
+📱 Phone: +91-9988766184
+
+🔗 GitHub & LinkedIn icons with links.
+
+Design Style:
+
+Use modern sans-serif fonts like “Poppins” or “Inter.”
+
+Include smooth transitions, slight 3D effects, and responsive layout.
+
+Add microinteractions on hover and scroll.
+
+Use AI-inspired backgrounds like waves, gradients, or neural lines.
+
+Goal: Create a visually striking portfolio that positions Ashnoor as a skilled AI Engineer and future innovator — perfect for recruiters and tech leaders.
