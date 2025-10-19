@@ -58,7 +58,7 @@ export function SkillsSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-skills-title">
             Technical <span className="gradient-text">Skills</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary mx-auto rounded-full shadow-lg glow-primary" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -67,14 +67,16 @@ export function SkillsSection() {
             return (
               <Card
                 key={category.id}
-                className="glassmorphism p-6 hover-elevate transition-all duration-300 group"
+                className="glassmorphism p-6 hover-elevate transition-all duration-300 hover:shadow-2xl group"
                 data-testid={`card-skills-${category.id}`}
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div
                     className={`p-3 rounded-lg ${
-                      category.color === "primary" ? "bg-primary/10 glow-primary" : "bg-secondary/10 glow-secondary"
-                    } group-hover:scale-110 transition-transform duration-300`}
+                      category.color === "primary" ? "bg-primary/10 group-hover:bg-primary/20" : "bg-secondary/10 group-hover:bg-secondary/20"
+                    } group-hover:scale-110 transition-all duration-300 ${
+                      category.color === "primary" ? "glow-primary" : "glow-secondary"
+                    }`}
                   >
                     <IconComponent
                       className={`w-6 h-6 ${category.color === "primary" ? "text-primary" : "text-secondary"}`}
@@ -90,8 +92,8 @@ export function SkillsSection() {
                     <Badge
                       key={skill}
                       variant="outline"
-                      className={`glassmorphism hover:-translate-y-1 transition-all duration-200 cursor-default ${
-                        category.color === "primary" ? "border-primary/30 hover:border-primary/60" : "border-secondary/30 hover:border-secondary/60"
+                      className={`glassmorphism hover:-translate-y-1 hover:shadow-lg transition-all duration-200 cursor-default ${
+                        category.color === "primary" ? "border-primary/30 hover:border-primary/70 hover:bg-primary/10" : "border-secondary/30 hover:border-secondary/70 hover:bg-secondary/10"
                       }`}
                       data-testid={`badge-skill-${skill.toLowerCase().replace(/\s+/g, '-').replace(/\//g, '-')}`}
                     >

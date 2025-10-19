@@ -51,7 +51,7 @@ export function ExperienceSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-experience-title">
             Professional <span className="gradient-text">Experience</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary mx-auto rounded-full shadow-lg glow-primary" />
         </div>
 
         <div className="relative">
@@ -72,9 +72,9 @@ export function ExperienceSection() {
                   }}
                 />
 
-                <Card className="glassmorphism p-6 md:p-8 hover-elevate transition-all duration-300 hover:glow-primary">
+                <Card className="glassmorphism p-6 md:p-8 hover-elevate transition-all duration-300 hover:shadow-2xl hover:border-primary/40 group">
                   <div className={`flex items-start gap-4 ${index % 2 === 1 ? "md:flex-row-reverse md:text-left" : ""}`}>
-                    <div className="p-3 bg-primary/10 rounded-lg glow-primary shrink-0">
+                    <div className="p-3 bg-primary/10 rounded-lg glow-primary shrink-0 group-hover:scale-110 transition-transform">
                       <Briefcase className="w-6 h-6 text-primary" />
                     </div>
                     <div className="flex-1 min-w-0">

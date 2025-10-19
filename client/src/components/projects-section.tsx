@@ -72,21 +72,21 @@ export function ProjectsSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-projects-title">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary mx-auto rounded-full shadow-lg glow-primary" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <Card
               key={project.id}
-              className="glassmorphism hover-elevate transition-all duration-300 hover:glow-primary flex flex-col overflow-hidden group"
+              className="glassmorphism hover-elevate transition-all duration-300 hover:shadow-2xl hover:border-primary/40 flex flex-col overflow-hidden group"
               style={{
                 animationDelay: `${index * 150}ms`,
                 animation: isVisible ? `fadeInUp 0.6s ease-out ${index * 150}ms both` : "none",
               }}
               data-testid={`card-project-${project.id}`}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <CardHeader className="relative z-10">
                 <div className="flex items-start justify-between mb-2">

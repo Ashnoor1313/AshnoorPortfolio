@@ -19,7 +19,7 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-about-title">
             About <span className="gradient-text">Me</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary mx-auto rounded-full shadow-lg glow-primary" />
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -39,9 +39,9 @@ export function AboutSection() {
           </div>
 
           <div className="space-y-6">
-            <Card className="glassmorphism p-6 hover-elevate transition-all duration-300" data-testid="card-education">
+            <Card className="glassmorphism p-6 hover-elevate transition-all duration-300 hover:shadow-2xl hover:border-primary/40" data-testid="card-education">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 rounded-lg glow-primary">
+                <div className="p-3 bg-primary/10 rounded-lg glow-primary group-hover:scale-110 transition-transform">
                   <GraduationCap className="w-6 h-6 text-primary" />
                 </div>
                 <div className="flex-1">
@@ -65,17 +65,17 @@ export function AboutSection() {
             </Card>
 
             <div className="grid grid-cols-2 gap-4">
-              <Card className="glassmorphism p-4 hover-elevate transition-all duration-300" data-testid="card-interest-ai">
+              <Card className="glassmorphism p-4 hover-elevate transition-all duration-300 hover:shadow-xl hover:border-primary/40 group" data-testid="card-interest-ai">
                 <div className="flex flex-col items-center text-center gap-3">
-                  <div className="p-3 bg-primary/10 rounded-lg">
+                  <div className="p-3 bg-primary/10 rounded-lg group-hover:scale-110 transition-transform">
                     <Brain className="w-6 h-6 text-primary" />
                   </div>
                   <p className="text-sm font-medium">AI/ML Research</p>
                 </div>
               </Card>
-              <Card className="glassmorphism p-4 hover-elevate transition-all duration-300" data-testid="card-interest-fullstack">
+              <Card className="glassmorphism p-4 hover-elevate transition-all duration-300 hover:shadow-xl hover:border-secondary/40 group" data-testid="card-interest-fullstack">
                 <div className="flex flex-col items-center text-center gap-3">
-                  <div className="p-3 bg-secondary/10 rounded-lg">
+                  <div className="p-3 bg-secondary/10 rounded-lg group-hover:scale-110 transition-transform">
                     <Code2 className="w-6 h-6 text-secondary" />
                   </div>
                   <p className="text-sm font-medium">Full-Stack Dev</p>
@@ -83,9 +83,9 @@ export function AboutSection() {
               </Card>
             </div>
 
-            <Card className="glassmorphism p-4 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20" data-testid="card-tech-stack">
+            <Card className="glassmorphism p-4 bg-gradient-to-br from-primary/5 to-secondary/5 border-primary/20 hover:border-primary/40 transition-all duration-300" data-testid="card-tech-stack">
               <div className="flex items-center gap-3">
-                <Lightbulb className="w-5 h-5 text-primary" />
+                <Lightbulb className="w-5 h-5 text-primary animate-pulse" />
                 <p className="text-sm text-muted-foreground">
                   Building with <span className="text-primary font-semibold">React</span>,{" "}
                   <span className="text-primary font-semibold">FastAPI</span>,{" "}

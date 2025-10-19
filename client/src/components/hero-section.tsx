@@ -11,8 +11,9 @@ export function HeroSection() {
     >
       <div className="max-w-7xl mx-auto w-full">
         <div className="flex flex-col items-center text-center gap-8 md:gap-12">
-          <div className="float-animation">
-            <Avatar className="w-32 h-32 md:w-48 md:h-48 border-4 border-primary pulse-glow" data-testid="img-avatar-hero">
+          <div className="float-animation relative">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full blur-3xl" />
+            <Avatar className="relative w-32 h-32 md:w-48 md:h-48 border-4 border-primary pulse-glow shadow-2xl" data-testid="img-avatar-hero">
               <AvatarFallback className="text-4xl md:text-6xl font-bold bg-gradient-to-br from-primary to-secondary text-primary-foreground">
                 AS
               </AvatarFallback>
@@ -34,7 +35,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <Button
               size="lg"
-              className="rounded-full px-8 py-6 text-base md:text-lg font-semibold glow-primary hover-elevate"
+              className="rounded-full px-8 py-6 text-base md:text-lg font-semibold glow-primary shadow-xl"
               asChild
               data-testid="button-view-projects"
             >
@@ -46,7 +47,7 @@ export function HeroSection() {
               <Button
                 size="icon"
                 variant="outline"
-                className="rounded-full w-12 h-12 hover-elevate"
+                className="rounded-full w-12 h-12 glassmorphism hover:glow-primary transition-all duration-300"
                 asChild
                 data-testid="button-github"
               >
@@ -62,7 +63,7 @@ export function HeroSection() {
               <Button
                 size="icon"
                 variant="outline"
-                className="rounded-full w-12 h-12 hover-elevate"
+                className="rounded-full w-12 h-12 glassmorphism hover:glow-primary transition-all duration-300"
                 asChild
                 data-testid="button-linkedin"
               >
@@ -78,7 +79,7 @@ export function HeroSection() {
               <Button
                 size="icon"
                 variant="outline"
-                className="rounded-full w-12 h-12 hover-elevate"
+                className="rounded-full w-12 h-12 glassmorphism hover:glow-primary transition-all duration-300"
                 asChild
                 data-testid="button-email"
               >

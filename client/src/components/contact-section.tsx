@@ -48,16 +48,16 @@ export function ContactSection() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4" data-testid="text-contact-title">
             Let's <span className="gradient-text">Collaborate!</span>
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mb-6" />
+          <div className="w-24 h-1.5 bg-gradient-to-r from-primary via-secondary to-primary mx-auto rounded-full shadow-lg glow-primary mb-6" />
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto" data-testid="text-contact-subtitle">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
         </div>
 
-        <Card className="glassmorphism p-8 md:p-12 hover-elevate transition-all duration-300 glow-primary">
+        <Card className="glassmorphism p-8 md:p-12 hover-elevate transition-all duration-300 hover:shadow-2xl hover:border-primary/40">
           <div className="space-y-6">
-            <div className="flex items-center gap-4 p-4 glassmorphism rounded-lg hover-elevate transition-all duration-200 group">
-              <div className="p-3 bg-primary/10 rounded-lg glow-primary group-hover:scale-110 transition-transform">
+            <div className="flex items-center gap-4 p-4 glassmorphism rounded-lg hover-elevate hover:shadow-xl transition-all duration-300 group">
+              <div className="p-3 bg-primary/10 rounded-lg glow-primary group-hover:scale-110 group-hover:bg-primary/20 transition-all">
                 <Mail className="w-6 h-6 text-primary" />
               </div>
               <div className="flex-1 min-w-0">
@@ -85,8 +85,8 @@ export function ContactSection() {
               </Button>
             </div>
 
-            <div className="flex items-center gap-4 p-4 glassmorphism rounded-lg hover-elevate transition-all duration-200 group">
-              <div className="p-3 bg-secondary/10 rounded-lg glow-secondary group-hover:scale-110 transition-transform">
+            <div className="flex items-center gap-4 p-4 glassmorphism rounded-lg hover-elevate hover:shadow-xl transition-all duration-300 group">
+              <div className="p-3 bg-secondary/10 rounded-lg glow-secondary group-hover:scale-110 group-hover:bg-secondary/20 transition-all">
                 <Phone className="w-6 h-6 text-secondary" />
               </div>
               <div className="flex-1 min-w-0">
@@ -122,7 +122,7 @@ export function ContactSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="glassmorphism hover-elevate hover:glow-primary transition-all duration-300"
+                  className="glassmorphism hover:shadow-xl hover:border-primary/60 transition-all duration-300"
                   asChild
                   data-testid="button-contact-github"
                 >
@@ -138,7 +138,7 @@ export function ContactSection() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="glassmorphism hover-elevate hover:glow-primary transition-all duration-300"
+                  className="glassmorphism hover:shadow-xl hover:border-primary/60 transition-all duration-300"
                   asChild
                   data-testid="button-contact-linkedin"
                 >

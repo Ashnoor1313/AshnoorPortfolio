@@ -27,8 +27,10 @@ export function Navigation() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? "glassmorphism shadow-lg" : "bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled 
+            ? "glassmorphism shadow-2xl border-b border-card-border/40" 
+            : "bg-transparent"
         }`}
         data-testid="navigation-main"
       >
@@ -36,7 +38,7 @@ export function Navigation() {
           <div className="flex items-center justify-between h-16 md:h-20">
             <a
               href="#home"
-              className="text-xl md:text-2xl font-bold gradient-text"
+              className="text-xl md:text-2xl font-bold gradient-text hover:scale-105 transition-transform duration-300"
               data-testid="link-home-logo"
             >
               Ashnoor Singh
@@ -47,10 +49,11 @@ export function Navigation() {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-all duration-300 relative group"
                   data-testid={`link-nav-${item.label.toLowerCase()}`}
                 >
                   {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-secondary group-hover:w-full transition-all duration-300"></span>
                 </a>
               ))}
             </div>
