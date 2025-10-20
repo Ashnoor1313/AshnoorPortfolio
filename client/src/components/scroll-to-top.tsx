@@ -6,28 +6,25 @@ export function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsVisible(window.scrollY > 500);
-    };
-
+    const handleScroll = () => setIsVisible(window.scrollY > 500);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <Button
       size="icon"
-      className={`fixed bottom-8 right-8 z-40 rounded-full w-12 h-12 shadow-lg glow-primary transition-all duration-300 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
-      }`}
       onClick={scrollToTop}
       data-testid="button-scroll-to-top"
+      className={`fixed bottom-10 right-10 z-50 w-14 h-14 rounded-full 
+        flex items-center justify-center
+        transition-all duration-300 backdrop-blur-md
+        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}
+        bg-cyan-500 hover:bg-cyan-400 text-white shadow-[0_0_25px_6px_rgba(0,255,255,0.6)] border border-cyan-300`}
     >
-      <ArrowUp className="w-5 h-5" />
+      <ArrowUp className="w-7 h-7 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
     </Button>
   );
 }

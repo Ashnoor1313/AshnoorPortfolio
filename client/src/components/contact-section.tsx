@@ -127,7 +127,7 @@ export function ContactSection() {
                   data-testid="button-contact-github"
                 >
                   <a
-                    href="https://github.com/ashnoorsingh"
+                    href="https://github.com/Ashnoor1313"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -143,7 +143,7 @@ export function ContactSection() {
                   data-testid="button-contact-linkedin"
                 >
                   <a
-                    href="https://linkedin.com/in/ashnoorsingh"
+                    href="https://www.linkedin.com/in/ashnoor-singh-683640298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -156,11 +156,7 @@ export function ContactSection() {
           </div>
         </Card>
 
-        <div className="mt-12 text-center">
-          <p className="text-sm text-muted-foreground" data-testid="text-footer">
-            © {new Date().getFullYear()} Ashnoor Singh. Crafted with passion and AI innovation.
-          </p>
-        </div>
+      
       </div>
     </section>
   );

@@ -31,7 +31,7 @@ export function AboutSection() {
               <span className="text-secondary font-semibold">computer vision</span> to real-world challenges.
             </p>
             <p className="text-base text-muted-foreground leading-relaxed" data-testid="text-about-detail">
-              I specialize in building full-stack AI systems that combine cutting-edge machine learning with modern web technologies. From training neural networks to deploying production-ready applications, I bridge the gap between research and real-world impact.
+            I’m an aspiring AI Engineer passionate about building full-stack intelligent systems that blend machine learning with modern web technologies. From experimenting with neural networks to developing end-to-end applications, I’m driven to bridge the gap between AI research and real-world innovation.
             </p>
             <blockquote className="border-l-4 border-primary pl-6 py-2 italic text-muted-foreground" data-testid="text-about-quote">
               "The best way to predict the future is to invent it—especially when powered by artificial intelligence."
@@ -70,7 +70,7 @@ export function AboutSection() {
                   <div className="p-3 bg-primary/10 rounded-lg group-hover:scale-110 transition-transform">
                     <Brain className="w-6 h-6 text-primary" />
                   </div>
-                  <p className="text-sm font-medium">AI/ML Research</p>
+                  <p className="text-sm font-medium">AI/ML Engineer</p>
                 </div>
               </Card>
               <Card className="glassmorphism p-4 hover-elevate transition-all duration-300 hover:shadow-xl hover:border-secondary/40 group" data-testid="card-interest-fullstack">

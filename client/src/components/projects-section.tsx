@@ -13,7 +13,7 @@ const projects = [
     longDescription: "Developed a comprehensive plant disease detection system achieving 95% accuracy through advanced CNN architecture. Full-stack deployment on Docker and Render.",
     accuracy: "95%",
     technologies: ["TensorFlow", "CNN", "React", "Docker", "Render"],
-    github: "https://github.com/ashnoorsingh/potatoguard",
+    github: "https://github.com/Ashnoor1313/PotatoGuard.git",
     highlights: [
       "95% disease classification accuracy",
       "Real-time image processing",
@@ -29,7 +29,7 @@ const projects = [
     longDescription: "Built a sophisticated QR code authentication system leveraging CNN for pattern recognition with industry-leading accuracy rates.",
     accuracy: "97%",
     technologies: ["CNN", "Computer Vision", "Python", "Security"],
-    github: "https://github.com/ashnoorsingh/qr-authenticator",
+    github: "https://github.com/Ashnoor1313/QR-Code-authenticator.git",
     highlights: [
       "97% verification accuracy",
       "Real-time authentication",
@@ -45,7 +45,7 @@ const projects = [
     longDescription: "Created an advanced document search engine combining NLP and large language models for intelligent query understanding and retrieval.",
     accuracy: null,
     technologies: ["FastAPI", "LangChain", "NLP", "LLM", "React"],
-    github: "https://github.com/ashnoorsingh/querysense",
+    github: "https://github.com/Ashnoor1313/NLP-Query-Engine.git",
     highlights: [
       "Semantic search capabilities",
       "LangChain integration",
